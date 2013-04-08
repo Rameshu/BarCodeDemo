@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZBarSDK.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<ZBarReaderDelegate> {
+    
+    IBOutlet UIImageView *imgView;
+    IBOutlet UITextView *txtView;
+    IBOutlet UIButton *btnScan;
+}
+
+- (IBAction)scanButtonAction:(id)sender;
 
 @end
